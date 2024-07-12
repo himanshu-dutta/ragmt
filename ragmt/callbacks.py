@@ -60,10 +60,9 @@ class WandBLogPredictionSamplesCallback(l.Callback):
                 "source": source_sample,
                 "target": target_sample,
                 "prediction": prediction_sample,
-                "epoch": epoch,
             }
             df = pd.DataFrame(data)
             self.wandb_logger.log_table(
-                key="val_prediction",
+                key=f"val_prediction_{trainer.current_epoch}_{batch_idx}",
                 dataframe=df,
             )
