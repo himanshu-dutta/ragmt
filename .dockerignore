@@ -1,0 +1,10 @@
+transformers/examples/research_projects/rag-end2end-retriever/test_run/cache
+transformers/examples/research_projects/rag-end2end-retriever/test_run/dummy-kb
+transformers/examples/research_projects/rag-end2end-retriever/test_run/dummy-train-data
+transformers/examples/research_projects/rag-end2end-retriever/test_run/kb-shards
+transformers/examples/research_projects/rag-end2end-retriever/test_run/model_checkpoints
+artifacts
+*logs
+runs
+wandb
+wordnets
