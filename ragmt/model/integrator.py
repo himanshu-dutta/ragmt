@@ -71,7 +71,7 @@ class TriplesIntegrator(BaseIntegrator):
         inputs = list()
         for t, ds in zip(text, docs):
             for d in ds:
-                inp = f"{d}{lang_code}{t}"
+                inp = f"{d} {lang_code} {t}"
                 inputs.append(inp)
 
         encodings = self.tokenizer(
