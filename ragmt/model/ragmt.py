@@ -310,6 +310,17 @@ class RAGMT(l.LightningModule):
             source_input_ids.repeat_interleave(self.n_docs, dim=0),
             similarity_score,
         )
+
+        for m, v in metrics.items():
+            self.log(
+                m,
+                v,
+                on_epoch=True,
+                on_step=True,
+                sync_dist=True,
+                batch_size=batch_size,
+            )
+
         self.log(
             "val_mt_loss",
             mt_loss,
